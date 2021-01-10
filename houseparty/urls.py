@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
 from houseparty import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.hi, name = 'hello')
+    path('room/', views.RoomView.as_view(), name='hello')
 ]
